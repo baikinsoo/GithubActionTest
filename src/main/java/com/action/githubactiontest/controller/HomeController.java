@@ -19,4 +19,9 @@ public class HomeController {
     public String codedeploy() {
         return "CICD!!!";
     }
+
+    @GetMapping("/new")
+    public String plz() {
+        return "wow!!!!!!!";
+    }
 }
