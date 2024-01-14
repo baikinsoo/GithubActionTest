@@ -14,9 +14,4 @@ public class HomeController {
     public String home() {
         return "Hello CICD! version : " + version;
     }
-
-    @GetMapping("/codedeploy")
-    public String codedeploy() {
-        return "CICD!!!";
-    }
 }
