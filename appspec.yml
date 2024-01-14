@@ -3,7 +3,7 @@ os: linux
 
 files:
   - source:  /
-    destination: /home/ubuntu/git-action
+    destination: /home/ubuntu/gitaction
     overwrite: yes
 
 permissions:
