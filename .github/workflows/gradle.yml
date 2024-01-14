@@ -15,7 +15,7 @@ on:
     
 env:
   AWS_REGION: ap-northeast-2
-  S3_BUCKET_NAME: bis-git-action-testt
+  S3_BUCKET_NAME: bis-git-action-test
   CODE_DEPLOY_APPLICATION_NAME: bis-codedeploy-app
   CODE_DEPLOY_DEPLOYMENT_GROUP_NAME: bis-codedeploy-app
   
