@@ -87,10 +87,9 @@ jobs:
     - name: Show Current Time
       run: echo "CurrentTime=${{steps.current-time.outputs.formattedTime}}"
       
-
+    # docker build -t <이미지_이름>:<태그> <Dockerfile_경로> gradle.yml의 실행 위치는 기본적으로 repository 루트 디렉토리다.
     - name: Build, tag, and push image to Amazon ECR
       run: |
-        # docker build -t <이미지_이름>:<태그> <Dockerfile_경로> gradle.yml의 실행 위치는 기본적으로 repository 루트 디렉토리다.
         docker build -t test:${{steps.current-time.outputs.formattedTime}} .
         docker tag test:${{steps.current-time.outputs.formattedTime}} 420932951054.dkr.ecr.ap-northeast-2.amazonaws.com/test:${{steps.current-time.outputs.formattedTime}}
         docker push 420932951054.dkr.ecr.ap-northeast-2.amazonaws.com/test:${{steps.current-time.outputs.formattedTime}}
