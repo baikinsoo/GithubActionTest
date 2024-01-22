@@ -36,7 +36,9 @@ jobs:
       with:
         java-version: '17'
         distribution: 'temurin'
+#Gradle 빌드를 위해 Gradle wrapper 스크립트를 사용하기 위함
     - name: Grant execute permission to Gradle wrapper
+#      work 뒤는 리포지토리 이름이고 해당 리포지토리 내에서 Gradle Wrapper 스크립트의 경로를 나타낸다.
       run: chmod +x /home/runner/work/GithubActionTest/GithubActionTest/gradlew
     - name: Build with Gradle
       uses: gradle/gradle-build-action@bd5760595778326ba7f1441bcf7e88b49de61a25 # v3.2.1
