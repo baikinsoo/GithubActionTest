@@ -13,6 +13,7 @@ permissions:
     group: ubuntu
 
 hooks:
+#  배포 후에 실행
   AfterInstall:
     - location: scripts/stop.sh
       timeout: 60
